@@ -1,0 +1,39 @@
+- hosts: dev
+  become: true
+  vars:
+    - port: 7070
+
+  tasks:
+
+    - name: running under block
+      block:
+        - name: Apache installation on centos
+          package:
+            name: ['httpd' ,'httpd-tools']
+            state: "installed"
+    
+        - name: service httpd started
+          service:
+            name: "httpd"
+            state: "started"
+
+        - name: copying template file to the location 
+          template:
+            src: "httpd.conf.j2"
+            dest: "/etc/httpd/conf/httpd.conf"
+          notify: restart
+    
+      rescue:
+        - name: "error handling"
+          debug:
+            msg: "runnign under debug"
+             
+        
+
+  handlers:
+    - name: restart
+      service:
+        name: "httpd"
+        state: "restarted"
+
+        

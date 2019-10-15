@@ -1,0 +1,45 @@
+---
+# tasks file for apache
+- name: installing packages
+  yum: 
+    name: ['httpd','httpd-tools']
+    state: "installed"
+
+
+- name: copying the template
+  template:
+    src: "httpd.conf.j2"
+    dest: "/etc/httpd/conf/httpd.conf"
+  notify: restart
+
+
+- name: service start
+  service:
+    name: "httpd"
+    state: "started"
+
+- name: copying the code base
+  copy:
+    src: "index.html"
+    dest: "/var/www/html/index.html"
+
+
+- name: running a command in ansible machien
+  shell: |
+        hostname
+  register: result
+  delegate_to: localhost
+
+- name: setup the facts
+  set_fact:
+    transfer: "{{ result.stdout }}" 
+
+- name: copying the result to node machine
+  copy:
+    content: |
+         {{ result.stdout }}
+    dest: /tmp/results
+
+
+- name: incluing subtasks
+  import_tasks: install.yml

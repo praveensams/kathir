@@ -1,0 +1,4 @@
+- name: coming from install
+  debug:
+    msg: " I am coming from sub script install {{ transfer }}"
+

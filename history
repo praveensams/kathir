@@ -1,0 +1,784 @@
+    1  tmux ls
+    2  yum install tmux -y
+    3  tmux new -s class
+    4  tmux ls
+    5  ssh vagrant@192.168.33.220
+    6  mkdir /playbook
+    7  cd /playbook
+    8  ls -ltr
+    9  vim inventory
+   10  ansible -i inventory dev -m ping 
+   11  ansible -i inventory dev -m ping inventory 
+   12  ansible -i inventory dev -m ping 
+   13  vim apache.yml
+   14  vim ~/.vimrc
+   15  vim apache.yml
+   16  scp vagrant@192.168.33.220:/etc/httpd/conf/httpd.conf .
+   17  vim apache.yml
+   18  ansible -i inventory apache.yml --syntax-check
+   19  ansible -i inventory apache.yml --check-syntax
+   20  ansible-playbook -i inventory apache.yml --syntax-check
+   21  vim apache.yml
+   22  cat apache.yml 
+   23  vim apache.yml
+   24  ansible-playbook -i inventory apache.yml --syntax-check
+   25  ansible-playbook -i inventory apache.yml 
+   26  vim apache.yml
+   27  ansible-playbook -i inventory apache.yml 
+   28  vim apache.yml
+   29  ansible-playbook -i inventory apache.yml 
+   30  vim httpd.conf 
+   31  vim apache.yml
+   32  ssh vagrant@192.168.33.220
+   33  cd
+   34  curl -s ifconfig.me
+   35  cd /playbook/
+   36  ls -ltr
+   37   vim apache.yml
+   38  tmux ls
+   39  tmux new -s sam 
+   40  ls -ltr
+   41  ifconfig -a
+   42  ssh vagrant@192.168.33.220
+   43  ls
+   44  cd
+   45  ls
+   46  vim 
+   47  vim sam.sh
+   48  bash sam.sh
+   49  bash -x sam.sh
+   50  vim sam.sh
+   51  vim sam.sh
+   52  bash -x sam.sh
+   53  bash  sam.sh
+   54  vim sam.sh
+   55  bash  sam.sh
+   56  vim sam.sh
+   57  bash  sam.sh
+   58  vim sam.sh
+   59  ssh vagrant@192.168.33.220
+   60  con() { ssh vagrant@192.168.33.$1; }
+   61  con 220
+   62  vim sam.sh
+   63  cat /etc/passwd
+   64  cat /etc/passwd | egrep -i '\w{3}\b'
+   65  cat /etc/passwd | egrep -i -o  '\w{3}\b'
+   66  cat /etc/passwd | egrep -i -o  '\b\w{3}\b'
+   67  cat /etc/passwd 
+   68  cat /etc/passwd | egrep -o '\w{4}'
+   69  cat /etc/passwd | egrep -o '\w{4}' | wc -l
+   70  ifconfig -a
+   71  ifconfig -a | egrep -o '\d'
+   72  ifconfig -a | egrep -o '\d'
+   73  ifconfig -a | egrep -o '[0-9]+'
+   74  ifconfig -a | egrep -o '[0-9]'
+   75  ifconfig -a
+   76  ifconfig -a | egrep -o '[0-9]*'
+   77  ifconfig -a | egrep -o '[0-9]{2,3}\.[0-9]{2,3}\.
+   78  ifconfig -a | egrep -o '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}'
+   79  ifconfig -a | egrep -o '([0-9]{1,3}\.){3}[0-9]{1,3}'
+   80  ifconfig -a | egrep -o '\w'
+   81  ifconfig -a | egrep -o '\w+'
+   82  ifconfig -a | egrep -o '\w
+   83  ifconfig -a | egrep -o '\w+'
+   84  ifconfig -a | egrep  '\w+'
+   85  ifconfig -a | egrep  'eth1'
+   86  ifconfig -a | egrep  -o 'eth1'
+   87  ifconfig -a | grep  -o 'eth1'
+   88  ifconfig -a | 
+   89  ifconfig -a | egrep  '\W+'
+   90  ifconfig -a | egrep  '\D+'
+   91  ifconfig -a | egrep  '\s+'
+   92  ifconfig -a | egrep  '\S+'
+   93  ifconfig -a | perl -ane 'if(/(\d{1,3}\.){3}\d{1,3}/) {print}'
+   94  ifconfig -a | perl -ane 'if(/(\d{1,3}\.){3}\d{1,3}/) {print $&}'
+   95  ifconfig -a | perl -ane 'if(/(\d{1,3}\.){3}\d{1,3}/) {print $&."\n"}'
+   96  yum install 2~
+   97  yum install multipath-tools -y
+   98  locale-gen en_US.UTF-8
+   99  yum install locales -y
+  100  ifconfig -a | perl -ane 'if(/(\d{1,3}\.){3}\d{1,3}/) {print $&."\n"}'
+  101  ifconfig -a | perl -ane 'if(/(\d{1,3}\.){3}\d{1,3}/) {print $&."\n"}' 2> /dev/null
+  102  ecec 2> /ev/null
+  103  ecec 2> /dev/null
+  104  ifconfig -a | perl -ane 'if(/(\d{1,3}\.){3}\d{1,3}/) {print $&."\n"}' 
+  105  ifconfig -a | perl -ane 'while(/(\d{1,3}\.){3}\d{1,3}/g) {print $&."\n"}' 
+  106  cd /playbook/
+  107  ls
+  108  cat apache.yml 
+  109  mkdir roles
+  110  cat inventory 
+  111  vim inventory 
+  112  ls
+  113  vim apache.yml 
+  114  ansible-playbook -i inventory apache.yml 
+  115  vim apache.yml 
+  116  ansible-playbook -i inventory apache.yml 
+  117  vim apache.yml 
+  118  ls
+  119  cd roles
+  120  ls
+  121  ansible-galaxy init apache 
+  122  ansible-galaxy install geerlingguy.apache
+  123  l s-ltr
+  124  ls -ltr
+  125  cd /etc/ansible/roles/geerlingguy.apache/
+  126  ls
+  127  vim tasks/configure-RedHat.yml
+  128  cd /playbook/
+  129  ls
+  130  cd roles
+  131  ls -ltr
+  132  cd /etc/ansible/roles/geerlingguy.apache/
+  133  ls
+  134  cd tasks/
+  135  ls
+  136  l
+  137  ls
+  138  vim configure-RedHat.yml
+  139  vim main.yml
+  140  vim main.yml
+  141  vim configure-RedHat.yml
+  142  cd ..
+  143  ls
+  144  cd templates/
+  145  ls
+  146  vim vhosts.conf.j2 
+  147  cd ..
+  148  de defaults/
+  149  ls
+  150  cd defaults/
+  151  ls
+  152  vim main.yml 
+  153  ls
+  154  cd ..
+  155  cd molecule/
+  156  ls
+  157  cd default/
+  158  ls
+  159  cd ..
+  160  cd ..
+  161  ls
+  162  yum install mod_ssl
+  163  rpm -ql mod_ssl
+  164  ls /var/cache/httpd/ssl
+  165  find / -name '*.crt' 
+  166  cd /playbook
+  167  ls
+  168  ls
+  169  cd rols
+  170  cd roles
+  171  ls
+  172  tree
+  173  yum install tree -y 
+  174  tree
+  175  cd apache/
+  176  ls
+  177  ls
+  178  vim tasks/main.yml 
+  179  cd ..
+  180  ls
+  181  ansible-galaxy init nginx
+  182  vim nginx/tasks/main.yml 
+  183  cd ..
+  184  ls
+  185  vim wrap.yml
+  186  ansible-playbook -i inventory wrap.yml 
+  187  ansible-playbook -i inventory wrap.yml 
+  188  ls -ltr
+  189  ls -ltr
+  190  vim wrap.yml 
+  191  vim wrap.yml 
+  192  git init .
+  193  ls -ltr
+  194  ls -ltr
+  195  ls -ltr
+  196  ls
+  197  su - vagrant
+  198  ls /home
+  199  su - vagrant
+  200  rpm -qc ansible
+  201  vim /etc/ansible/ansible.cfg
+  202  vim /etc/ansible/hosts
+  203  yum install ansible -y
+  204  which ls
+  205  ldd /bin/ls
+  206  yum provides '*/libacl.so.1'
+  207  man ls
+  208  rpm -qc ansible 
+  209  which ansible
+  210  vim $(which ansible)
+  211  hostname ansible
+  212  ansible
+  213  ls -ltr
+  214  cat /etc/ansible/hosts 
+  215  ls
+  216  cd /playbook/
+  217  ls
+  218  cd ..
+  219  mkdir devops_evening
+  220  cd devops_evening
+  221  ls
+  222  ls -lt
+  223  ls -ltr
+  224  vim install.yml
+  225  vim index.html
+  226  vim /etc/ansible/hosts 
+  227  ansible-playbook install.yml 
+  228  ps aux | egrep -i 'node|pm2|npm' | grep -v egrep | awk '{print $2}' | xargs kill -9 
+  229  nslookup 54.171.166.128
+  230  yum install ansible -y
+  231  ls
+  232  rpm -qc ansible
+  233  vim 2~
+  234  vim /etc/ansible/hosts
+  235  ansible node01 -m ping 
+  236  ansible-doc -l
+  237  ansible node -m yum -a "name=httpd state=installed" -b
+  238  ansible node01 -m yum -a "name=httpd state=installed" -b
+  239  ansible node01 -m service -a "name=httpd state=restarted" -b
+  240  ls
+  241  hostname ansible
+  242  cd /playbook
+  243  ls
+  244  hostname ansible
+  245  cd /playbook
+  246  ls
+  247  cd
+  248  cd /playbook/
+  249  ls
+  250  cd ..
+  251  cd /
+  252  ls -ltr
+  253  cd devops_evening/
+  254  ls
+  255  vim install.yml 
+  256  cd /playbook
+  257  ls -ltr
+  258  ls
+  259  ls -ltr
+  260  vim apache1.yml 
+  261  vim apache1.yml 
+  262  ansible-playbook -i inventory apache1.yml 
+  263  ansible-playbook  apache1.yml 
+  264  tmux new -s sam
+  265  cd /playbook/
+  266  ls -ltr
+  267  vim apache1.yml 
+  268  vim apache1.yml 
+  269  vim apache1.yml 
+  270  ansible-playbook apache1.yml 
+  271  cat index.html
+  272  hostname ansible
+  273  ls -ltr
+  274  init 0
+  275  hostname ansible
+  276  ansible node02 -m ping
+  277  ssh vagrant@192.168.33.100
+  278  ansible node02 -m ping
+  279  tmux ls
+  280  cat /etc/ansible/hosts 
+  281  ansible node01 -m file -a "name=/mnt/test state=directory" -b
+  282  ansible node01 -m file -a "name=/mnt/test1 state=directory" -b
+  283  cd 
+  284  cd /playbook/
+  285  ls -ltr
+  286  cd /devops_evening/
+  287  ls
+  288  ls -ltr
+  289  vim apache_install.yml
+  290  ansible-doc yum
+  291  !
+  292  vim apache_install.yml
+  293  cat index.html 
+  294  ansible-playbook apache_install.yml --syntax-check
+  295  ansible-playbook apache_install.yml --list-tasks
+  296  ansible-playbook apache_install.yml --help
+  297  ansible-playbook apache_install.yml --start-at-task="copy the index.html from the present folder"
+  298  ansible-playbook apache_install.yml 
+  299  echo "bye" > index.html
+  300  ansible-playbook apache_install.yml 
+  301  vim /etc/ansible/hosts 
+  302  ls
+  303  vim httpd.conf.j2 
+  304  vim apache_install.yml 
+  305  ansible-playbook apache_install.yml 
+  306  vim apache_install.yml 
+  307  vim httpd.conf.j2 
+  308  vim apache_install.yml 
+  309  ansible-playbook apache_install.yml 
+  310  vim apache_install.yml 
+  311  #ansible-playbook apache_install.yml  
+  312  vim /etc/ansible/hosts 
+  313  vim apache_install.yml 
+  314  vim /etc/ansible/hosts 
+  315  #ansible-playbook apache_install.yml  
+  316  ansible-playbook apache_install.yml  
+  317  vim /etc/ansible/hosts 
+  318  ansible-playbook apache_install.yml  
+  319  vim apache_install.yml 
+  320  ansible-playbook apache_install.yml  
+  321  ansible-playbook apache_install.yml   -e "ports=3030"
+  322  vim apache_install.yml 
+  323  vim /etc/ansible/hosts 
+  324  ansible-playbook apache_install.yml   -e "ports=3030"
+  325  ansible-playbook apache_install.yml   
+  326  vim apache_install.yml 
+  327  vim httpd.conf.j2 
+  328  ansible-playbook apache_install.yml   
+  329  vim httpd.conf.j2 
+  330  vim apache_install.yml 
+  331  vim apache_install.yml 
+  332  ansible-playbook -i inventory apache1.yml 
+  333  ansible-playbook apache_install.yml 
+  334  vim apache_install.retry 
+  335  ansible-playbook apache_install.yml  --limit @/devops_evening/apache_install.retry
+  336  ansible-playbook apache_install.yml  --limit @/devops_evening/apache_install.retry
+  337  init 0
+  338  vim /etc/ansible/hosts 
+  339  cd /devops_evening/
+  340  ls
+  341  vim apache_install.
+  342  vim apache_install.yml 
+  343  vim apache_install.yml 
+  344  vim /etc/ansible/hosts 
+  345  ansible-playbook apache1.yml 
+  346  ls
+  347  ansible-playbook apache_install.yml 
+  348  ansible-playbook apache_install.yml 
+  349  ansible-playbook apache_install.yml  -f 1
+  350  time ansible-playbook apache_install.yml  -f 1
+  351  time ansible-playbook apache_install.yml  
+  352  init 0
+  353  hostname ansible
+  354  vim /etc/host
+  355  vim /etc/hostname 
+  356  cd /devops_evening/
+  357  ls
+  358  vim apache_install.yml 
+  359  time ansible-playbook apache_install.yml  
+  360  vim /etc/ansible/hosts 
+  361  time ansible-playbook apache_install.yml  
+  362  vim apache_install.yml 
+  363  time ansible-playbook apache_install.yml  
+  364  time ansible-playbook apache_install.yml   -e "ports=4040"
+  365  vim apache_install.yml 
+  366  time ansible-playbook apache_install.yml   -e "ports=4040"
+  367  vim apache_install.yml 
+  368  time ansible-playbook apache_install.yml   -e "ports=4040"
+  369  vim apache_install.yml 
+  370  time ansible-playbook apache_install.yml   -e "ports=4040"
+  371  vim apache_install.yml 
+  372  ls
+  373  cd roles
+  374  ls
+  375  cd ..
+  376  rm -rf roles
+  377  mkdir roles
+  378  cd roles
+  379  ls
+  380  ansible-galaxy init apache
+  381  ls -ltr
+  382  tree apache
+  383  cd apache
+  384  ls
+  385  ls
+  386  cat ../../apache_install.yml 
+  387  ls
+  388  cat ../../apache_install.yml  > tasks/main.yml 
+  389  vim tasks/main.yml 
+  390  ls
+  391  cp ../../httpd.conf.j2 templates/ -rvfcd
+  392  cp -rvf ../../index.html files/
+  393  ls -ltr
+  394  vim handlers/main.yml 
+  395  cd ../../
+  396  ls
+  397  vim wrap.yml 
+  398  ansible-playbook wrap.yml
+  399  cd roles
+  400  ls
+  401  ansible-galaxy init nginx
+  402  vim nginx/tasks/main.yml 
+  403  cd ..
+  404  vim wrap.yml
+  405  ansible-playbook wrap.yml
+  406  vim roles/nginx/tasks/main.yml 
+  407  ansible-playbook wrap.yml
+  408  vim roles/nginx/tasks/main.yml 
+  409  ansible-playbook wrap.yml
+  410  vim roles/nginx/tasks/main.yml 
+  411  ansible-playbook wrap.yml
+  412  vim roles/nginx/tasks/main.yml 
+  413  vim roles/nginx/handlers/main.yml 
+  414  ansible-playbook wrap.yml
+  415  vim roles/nginx/handlers/main.yml 
+  416  vim roles/nginx/tasks/main.yml 
+  417  vim roles/nginx/handlers/main.yml 
+  418  vim roles/nginx/tasks/main.yml 
+  419  vim roles/nginx/handlers/main.yml 
+  420  ansible-playbook wrap.yml
+  421  vim roles/nginx/handlers/main.yml 
+  422  vim roles/nginx/tasks/main.yml 
+  423  ansible-playbook wrap.yml
+  424  vim roles/nginx/tasks/main.yml 
+  425  ansible-playbook wrap.yml
+  426  vim roles/nginx/tasks/main.yml 
+  427  ansible-playbook wrap.yml
+  428  vim roles/nginx/tasks/main.yml 
+  429  ansible-playbook wrap.yml
+  430  vim roles/nginx/tasks/main.yml 
+  431  ansible-playbook wrap.yml
+  432  vim roles/nginx/tasks/main.yml 
+  433  ansible-playbook wrap.yml
+  434  vim roles/nginx/tasks/main.yml 
+  435  ansible-playbook wrap.yml
+  436  vim roles/nginx/tasks/main.yml 
+  437  ansible-playbook wrap.yml
+  438  vim wrap.yml 
+  439  ansible-playbook wrap.yml
+  440  ansible-playbook wrap.yml
+  441  vim wrap.yml 
+  442  vim roles/nginx/tasks/main.yml 
+  443  ansible-playbook wrap.yml
+  444  vim roles/nginx/tasks/main.yml 
+  445  ansible-playbook wrap.yml
+  446  vim roles/nginx/tasks/main.yml 
+  447  ansible-playbook wrap.yml
+  448  vim roles/nginx/tasks/main.yml 
+  449  ansible-playbook wrap.yml
+  450  ansible-playbook wrap.yml
+  451  ansible-playbook wrap.yml
+  452  vim req.yml
+  453  ansible-playbook req.yml
+  454  ansible-playbook req.yml
+  455  ansible-playbook req.yml
+  456  ls
+  457  cd
+  458  vim /etc/ansible/hosts 
+  459  vim /etc/ansible/hosts 
+  460  ansible node01 -m ping
+  461  ansible-doc -
+  462  ansible node01 -m package -a "name=httpd state=installed" -b
+  463  ansible node01 -m package -a "name=httpd state=absent" -b
+  464  ansible node01 -m package -a "name=httpd state=absent" -b
+  465  vim /etc/ansible/ansible.cfg 
+  466  tail -f /var/log/ansible.log 
+  467  date
+  468  less /var/log/ansible.log 
+  469  ansible node01 -m copy -a "src=/etc/passwd dest=/mnt" -b
+  470  cd /murugan/
+  471  ls
+  472  vim install.yml 
+  473  cd
+  474  ls
+  475  knife node
+  476  knife node run_list add node01 "recipe[apache]"
+  477  knife node show node01
+  478  curl 192.168.33.110
+  479  curl 192.168.33.110
+  480  cd cookbooks/apache/
+  481  ls
+  482  mkdir files
+  483  cd files
+  484  ls
+  485  vim index.html
+  486  cd ..
+  487  ls
+  488  vim recipes/default.rb 
+  489  vim metadata.rb 
+  490  ls
+  491  vim CHANGELOG.md 
+  492  cd ..
+  493  knife cookbook upload apache
+  494  vim recipes/default.rb 
+  495  vim apache/recipes/default.rb 
+  496  ruby
+  497  vim apache/recipes/default.rb 
+  498  knife cookbook upload apache
+  499  vim apache/recipes/default.rb apache/
+  500  vim apache/recipes/default.rb
+  501  cd apache/
+  502  ls
+  503  mkdir attributes
+  504  cd attributes/
+  505  vim default.rb
+  506  vim apache/recipes/default.rb
+  507  cd ..
+  508  vim recipes/default.rb 
+  509  vim metadata.rb 
+  510  vim ~/.bashrc
+  511  source ~/.bashrc
+  512  ls
+  513  ssh-keygen 
+  514  cd ~/.ssh/
+  515  ls
+  516  ssh-keygen 
+  517  ls -ltr
+  518  cat id_rsa.pub
+  519  python
+  520  easy_install paramiko 
+  521  python 
+  522  if ( rpm -qa | grep -i httpd ) ; then  echo "packages are there"; fi
+  523  ls
+  524  ls
+  525  vim /etc/resolv.conf 
+  526  ls -ltr
+  527  cat apache/recipes/default.rb 
+  528  cd
+  529  ls
+  530  vim cookbooks/apache/recipes/default.rb 
+  531  cp /home/vagrant/apache/templates/sam.erb cookbooks/apache/
+  532  cd cookbooks/apache/
+  533  ls
+  534  mkdir templates
+  535  cp sam.erb templates/
+  536  cd templates
+  537  ls
+  538  ls -ltr
+  539  cd ..
+  540  cd
+  541  vim cookbooks/apache/recipes/default.rb 
+  542  knife cookbook upload apache
+  543  vim cookbooks/apache/recipes/default.rb 
+  544  knife cookbook upload apache
+  545  vim cookbooks/apache/recipes/default.rb 
+  546  knife cookbook upload apache
+  547  vim cookbooks/apache/recipes/default.rb 
+  548  cat /home/vagrant/apache/recipes/default.rb 
+  549  vim cookbooks/apache/recipes/default.rb 
+  550  knife cookbook upload apache
+  551   
+  552  vim cookbooks/apache/recipes/default.rb 
+  553  cd apa
+  554  cd cookbooks/apache/
+  555  ls
+  556  cd templates/
+  557  ls
+  558  scp vagrant@192.168.33.110:/etc/httpd/conf/httpd.conf httpd.conf.erb
+  559  ls -tlr
+  560  vim httpd.conf.erb 
+  561  cd ..
+  562  ls
+  563  vim attributes/default.rb 
+  564  knife cookbook upload apache
+  565  vim recipes/default.rb 
+  566  knife cookbook upload apache
+  567  vim recipes/default.rb 
+  568  knife cookbook upload apache
+  569  vim recipes/default.rb 
+  570  knife environment list
+  571  knife environment create nexus
+  572  export EDITOR=vim
+  573  knife environment create nexus
+  574  knife node
+  575  knife node environment set node1 nexus
+  576  knife node list
+  577  knife node environment set node01 nexus
+  578  knife node edit node01
+  579  knife environment show nexus
+  580  knife node show node01
+  581  knife node edit node01
+  582  knife node show node01
+  583  python 
+  584  easy_install boto3
+  585  python
+  586  easy_install urllib3
+  587  python 
+  588  vim sam.py
+  589  vim sam.py
+  590  cd
+  591  ls -ltr
+  592  cd /home/vagrant/
+  593  ls -ltr
+  594  cd
+  595  ls
+  596  ls
+  597  for i in * ; do echo $i; done
+  598  if [ -f original-ks.cfg ]; then echo "original-ks.cfg is a file"; fi
+  599  if [ ! -d meera ]; then mkdir meera; fi
+  600  ls -ltr
+  601  if [ ! -d meera ]; then mkdir meera; fi
+  602  ls -ltr
+  603  rm -rf meera
+  604  if [ ! -d meera ]; then mkdir meera; fi
+  605  ls
+  606  if [ ! -d meera ]; then mkdir meera;  else echo "folder is already there "; fi
+  607  ls -ltr
+  608  if [ ! -d meera ]; then mkdir meera;  else echo "folder is already there "; fi
+  609  if [ ! -d meera ]; then mkdir meera;  else echo "folder is already there "; fi
+  610  rm -rf meera
+  611  if [ ! -d meera ]; then mkdir meera;  else echo "folder is already there "; fi
+  612  ls
+  613  while [ -d meera ]; do echo "meera folder is there"; sleep 1; done
+  614  ls
+  615  cat sam.sh
+  616  grep even sam.sh
+  617  while ( grep even sam.sh ); do echo ; echo "even word is there"; sleep 1; done
+  618  until ( grep even sam.sh ); do echo ; echo "even word is there"; sleep 1; done
+  619  while true; do while  ( grep even sam.sh ); do echo "even word is there"; done; until  ( grep even sam.sh ); do echo "even word is not thre "; done; done
+  620  ls-ltr
+  621  ls -ltr
+  622  cd
+  623  ls -tlr
+  624  rm -rf meera
+  625  vim sam.sh
+  626  vim sam.sh
+  627  vim sam.sh
+  628  cd
+  629  ls -ltr
+  630  cd /home/vagrant/
+  631  ls -ltr
+  632  ls
+  633  ls
+  634  ls
+  635  ls -ltr
+  636  vim /etc/ansible/hosts 
+  637  ansible dev -m copy -a "src=sam.sh dest=/mnt" -b
+  638  init 0
+  639  ls -ltr
+  640  cd
+  641  ansble dev -m ping
+  642  ansible dem -m ping
+  643  init 0
+  644  knife node list
+  645  knife bootstrap 192.168.33.110 -x vagrant -Pvagrant -N "node01"
+  646  knife bootstrap 192.168.33.110 -x vagrant -Pvagrant -N "node01" --sudo
+  647  knife bootstrap 192.168.33.110 -x vagrant -Pvagrant -N "node01" --sudo
+  648  ssh vagrant@192.168.33.110
+  649  sed -i '2d' ~/.ssh/known_hosts 
+  650  ssh vagrant@192.168.33.110
+  651  knife bootstrap 192.168.33.110 -x vagrant -Pvagrant -N "node01" --sudo
+  652  ssh vagrant@192.168.33.110
+  653  knife bootstrap 192.168.33.110 -x vagrant -Pvagrant -N "node01" --sudo
+  654  ls
+  655  cd cookbo
+  656  cd
+  657  cd cookbooks/
+  658  ls -ltr
+  659  chef generate cookbook libs
+  660  cd libs
+  661  ls -ltr
+  662  mkdir libraries
+  663  cd libraries
+  664  ls
+  665  vim default.rb
+  666  vim Helpers.rb
+  667  cd ../
+  668  vim recipes/default.rb 
+  669  knife cookbook upload libs
+  670  vim libraries/Helpers.rb 
+  671  knife cookbook upload libs
+  672  vim libraries/Helpers.rb 
+  673  vim recipes/default.rb 
+  674  knife cookbook upload libs
+  675  cd
+  676  yum provides '*/bin/groovy' 
+  677  yum install groovy-1.8.9-8.el7_4.noarch -y
+  678  cdl -ltr
+  679  cd -ltr
+  680  ls -ltr
+  681  ls -ltr
+  682  cd 
+  683  ls -ltr
+  684  cd cookbooks/
+  685  ls
+  686  cd libs
+  687  ls
+  688  cd libraries/
+  689  ls
+  690  cat Helpers.rb 
+  691  python
+  692  cd /var/log
+  693  ls -ltr
+  694  date
+  695  cat messages
+  696  python
+  697  cat app.log 
+  698  cdl
+  699  cd 
+  700  ls -lr
+  701  ls-ltr
+  702  ls -ltr
+  703  ls -a
+  704  yum install chef -y 
+  705  rpm -qa | grep -i chef
+  706  knife
+  707  ls
+  708  pwd
+  709  ls -a
+  710  knife client list
+  711  ls -ltr
+  712  cd /home
+  713  ls -ltr
+  714  cd vagrant/
+  715  ls -ltr
+  716  unzip chef-starter\ \(1\).zip 
+  717  ls -ltr
+  718  cd chef-repo/
+  719  ls
+  720  cp -rvf .chef ~/.
+  721  ls -ltr
+  722  cd
+  723  ls -ltra 
+  724  knife client list
+  725  ls -ltr
+  726  yum install ansible -y 
+  727  ls -ltr
+  728  vim apache.yml 
+  729  ansible dev -m setup -a "filter=*hostname*"
+  730  vim apache.yml 
+  731  ansible dev -m setup -a "filter=*hostname*"
+  732  ansible-playbook apache.yml 
+  733  vim apache.yml 
+  734  ansible-playbook apache.yml 
+  735  ansible dev -m setup -a "filter=*memory*"
+  736  ansible dev -m setup -a "filter=ansible_memory_mb.nocache*"
+  737  ansible dev -m setup -a "filter={{ansible_memory_mb.nocache}}"
+  738  ansible dev -m setup -a "filter=\ansible_memory_mb.nocache"
+  739  ansible dev -m setup -a "filter=ansible_memory_mb.nocache"
+  740  ansible dev -m setup -a "gather_subsets=nocache"
+  741  ansible dev -m setup -a "gather_subset=nocache"
+  742  ansible dev -m setup -a "gather_subset=ansible_memory_mb.nocache"
+  743  ansible dev -m setup -a "gather_subset=ansible_memory_mb"
+  744  ansible dev -m setup -a "filter=ansible_memory_mb"
+  745  ls
+  746  cat apache.yml 
+  747  scp vagrant@192.168.33.110
+  748  scp vagrant@192.168.33.110:/etc/httpd/conf/httpd.conf httpd.conf.j2
+  749  vim httpd.conf.j2 
+  750  vim apache.yml 
+  751  ansible-playbook apache.yml 
+  752  vim apache.yml 
+  753  ansible-playbook apache.yml 
+  754  vim apache.yml 
+  755  ansible-playbook apache.yml 
+  756  curl 192.168.33.110:7070
+  757  curl 192.168.33.110:8080
+  758  vim apache.yml 
+  759  ansible-playbook apache.yml 
+  760  vim apache.yml 
+  761  ansible-playbook apache.yml 
+  762  vim apache.yml 
+  763  ansible-playbook apache.yml 
+  764  vim apache.yml 
+  765  ansible-playbook apache.yml 
+  766  vim apache.yml 
+  767  ansible dev -m shell -a "netstat -ntpl" -b
+  768  curl 192.168.33.110:7070
+  769  vim apache.yml 
+  770  curl 192.168.33.110:7070
+  771  ansible-playbook apache.yml 
+  772  vim apache.yml  +/start
+  773  ansible-playbook apache.yml 
+  774  curl 192.168.33.110:7070
+  775  lynx
+  776  wget
+  777  curl www.google.com
+  778  vim apache.yml 
+  779  ansible-playbook apache.yml 
+  780  vim apache.yml 
+  781  ansible-playbook apache.yml 
+  782  ansible-playbook apache.yml -e "ports=4040"
+  783  history
+  784  history > history

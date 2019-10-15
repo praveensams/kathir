@@ -1,0 +1,11 @@
+---
+# tasks file for nginx
+- name: "installing packages"
+  yum:
+    name: ["epel-release"]
+    state: "installed"
+
+- name: "installing nginx packages"
+  yum:
+    name: ["nginx"]
+    state: "installed"
