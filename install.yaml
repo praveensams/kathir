@@ -1,0 +1,9 @@
+- hosts: locals
+  become: true
+
+  tasks:
+
+    - name: Installing packages
+      yum:
+        name: "{{packs}}"
+        state: "installed"
