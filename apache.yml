@@ -1,4 +1,4 @@
-- hosts: dev
+- hosts: locals
   become: true
   vars:
     - port: 7070
