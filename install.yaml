@@ -3,6 +3,10 @@
 
   tasks:
 
+    - name: debugging
+      debug:
+        msg: "{{ packs}}"
+
     - name: Installing packages
       yum:
         name: "{{packs}}"
