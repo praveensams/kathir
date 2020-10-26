@@ -35,7 +35,7 @@ return choices''', multiSelectDelimiter: ',', name: 'testing', quoteValue: false
         }
         stage('Triggering') {
           steps {
-              ansibleTower extraVars: 'packs: "httpd"', jobTemplate: 'running-locals', jobType: 'run', throwExceptionWhenFail: false, towerCredentialsId: '8fb7ead4-0d33-4b1a-b6af-e605e915aa32', towerLogLevel: 'false', towerServer: 'localtower'
+              ansibleTower extraVars: 'packs: "${package}"', jobTemplate: 'running-locals', jobType: 'run', throwExceptionWhenFail: false, towerCredentialsId: '8fb7ead4-0d33-4b1a-b6af-e605e915aa32', towerLogLevel: 'false', towerServer: 'localtower'
           }
         }
     }
