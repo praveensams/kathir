@@ -1,13 +1,13 @@
 #!/usr/bin/env groovy
 // Define variables
-List category_list = ["\"Select:selected\"","\"Vegetables\"","\"Fruits\""]
-List fruits_list = ["\"Select:selected\"","\"apple\"","\"banana\"","\"mango\""]
-List vegetables_list = ["\"Select:selected\"","\"potato\"","\"tomato\"","\"broccoli\""]
+List category_list = ["\"Select:selected\"","\"package\"","\"playbook\""]
+List package_list = ["\"Select:selected\"","\"httpd\"","\"nginx\"","\"vsftpd\""]
+List playbook_list = ["\"Select:selected\"","\"apache\"","\"tomcat\""]
 List default_item = ["\"Not Applicable\""]
 String categories = buildScript(category_list)
-String vegetables = buildScript(vegetables_list)
-String fruits = buildScript(fruits_list)
-String items = populateItems(default_item,vegetables_list,fruits_list)
+String vegetables = buildScript(package_list)
+String fruits = buildScript(playbook_list)
+String items = populateItems(default_item,playbook_list,package_list)
 // Methods to build groovy scripts to populate data
 String buildScript(List values){
   return "return $values"
