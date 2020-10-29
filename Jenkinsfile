@@ -1,8 +1,8 @@
 #!/usr/bin/env groovy
 // Define variables
 List category_list = ["\"Select:selected\"","\"Vegetables\"","\"Fruits\""]
-List fruits_list =["\"Select:selected\"","\"apple\"","\"banana\"","\"mango\""]
-List vegetables_list =["\"Select:selected\"","\"potato\"","\"tomato\"","\"broccoli\""]
+List fruits_list = ["\"Select:selected\"","\"apple\"","\"banana\"","\"mango\""]
+List vegetables_list = ["\"Select:selected\"","\"potato\"","\"tomato\"","\"broccoli\""]
 List default_item = ["\"Not Applicable\""]
 String categories = buildScript(category_list)
 String vegetables = buildScript(vegetables_list)
@@ -38,7 +38,7 @@ script: categories]]],
 script: [$class: 'GroovyScript', fallbackScript: [classpath: [],
 sandbox: false, script: 'return ["error"]'], script: [classpath: [],
 sandbox: false, script: items]]]
-])
+            ])
 ])
 
 pipeline {
