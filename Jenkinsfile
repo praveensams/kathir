@@ -10,8 +10,7 @@ List default_item = ["\"Not Applicable\""]
 String categories = buildScript(category_list)
 String vegetables = buildScript(vegetables_list)
 String fruits = buildScript(fruits_list)
-String items =
-populateItems(default_item,vegetables_list,fruits_list)
+String items = populateItems(default_item,vegetables_list,fruits_list)
 // Methods to build groovy scripts to populate data
 String buildScript(List values){
 return "return $values"
