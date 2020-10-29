@@ -14,7 +14,7 @@ String items = populateItems(default_item,playbook_list,package_list)
 String buildScript(List values){
   return "return $values"
 }
-String populateItems(List default_item, List packageList, List playbookList){
+String populateItems(List default_item, List package_list, List playbook_list){
 return """if(Categories.equals('package')){
      return $packageList
      }
