@@ -63,6 +63,7 @@ return choices''', multiSelectDelimiter: ',', name: 'testing', quoteValue: false
         stage('Test') {
             steps {
         sh 'echo Running terraform'
+        sh 'echo ${fruit}'
 
      
     }
