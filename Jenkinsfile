@@ -7,7 +7,7 @@ List default_item = ["\"Not Applicable\""]
 String categories = buildScript(category_list)
 String vegetables = buildScript(playbook_list)
 String fruits = buildScript(package_list)
-String items = populateItems(default_item,vegetables_list,fruits_list)
+String items = populateItems(default_item,playbook_list,package_list)
 // Methods to build groovy scripts to populate data
 String buildScript(List values){
   return "return $values"
