@@ -1,9 +1,7 @@
 #!/usr/bin/env groovy
 // Define variables
-List category_list = ["\"Select:selected\"","\"playbook\"","\"package\""]
-List playbook_list = ["\"Select:selected\"","\"apache\"","\"nginx\"","\"tomcat\""]
-#!/usr/bin/env groovy
-// Define variables
+//List category_list = ["\"Select:selected\"","\"playbook\"","\"package\""]
+//List playbook_list = ["\"Select:selected\"","\"apache\"","\"nginx\"","\"tomcat\""]
 List category_list = ["\"Select:selected\"","\"Vegetables\"","\"Fruits\""]
 List fruits_list = ["\"Select:selected\"","\"apple\"","\"banana\"","\"mango\""]
 List vegetables_list = ["\"Select:selected\"","\"potato\"","\"tomato\"","\"broccoli\""]
