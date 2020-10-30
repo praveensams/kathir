@@ -1,5 +1,3 @@
-
-
 #!/usr/bin/env groovy
 // Define variables
 List category_list = ["\"Select:selected\"","\"Vegetables\"","\"Fruits\""]
