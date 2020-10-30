@@ -1,7 +1,9 @@
+
+
 #!/usr/bin/env groovy
 // Define variables
 List category_list = ["\"Select:selected\"","\"Vegetables\"","\"Fruits\""]
-List fruits_list = ["\"Select:selected\"","\"sam\"","\"banana\"","\"mango\""]
+List fruits_list = ["\"Select:selected\"","\"apple\"","\"banana\"","\"mango\""]
 List vegetables_list = ["\"Select:selected\"","\"potato\"","\"tomato\"","\"broccoli\""]
 List default_item = ["\"Not Applicable\""]
 String categories = buildScript(category_list)
@@ -12,7 +14,8 @@ String items = populateItems(default_item,vegetables_list,fruits_list)
 String buildScript(List values){
   return "return $values"
 }
-String populateItems(List default_item, List vegetablesList, List fruitsList){
+String populateItems(List default_item, List vegetablesList, List fruits
+List){
 return """if(Categories.equals('Vegetables')){
      return $vegetablesList
      }
