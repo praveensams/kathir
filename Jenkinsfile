@@ -13,7 +13,7 @@ String buildScript(List values){
   return "return $values"
 }
 String populateItems(List default_item, List vegetablesList, List fruits
-List){
+List) {
 return """if(Categories.equals('Vegetables')){
      return $vegetablesList
      }
