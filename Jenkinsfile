@@ -1,7 +1,7 @@
 #!/usr/bin/env groovy
 // Define variables
 List category_list = ["\"Select:selected\"","\"Vegetables\"","\"Fruits\""]
-List fruits_list = ["\"Select:selected\"","\"httpd\"","\"banana\"","\"mango\""]
+List fruits_list = ["\"Select:selected\"","\"apple\"","\"banana\"","\"mango\""]
 List vegetables_list = ["\"Select:selected\"","\"potato\"","\"tomato\"","\"broccoli\""]
 List default_item = ["\"Not Applicable\""]
 String categories = buildScript(category_list)
