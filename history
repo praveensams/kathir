@@ -230,7 +230,9 @@
   230  yum install ansible -y
   231  ls
   232  rpm -qc ansible
-  233  vim 2~
+  233  vim 2~ddd
+  
+  dddddddddd
   234  vim /etc/ansible/hosts
   235  ansible node01 -m ping 
   236  ansible-doc -l
