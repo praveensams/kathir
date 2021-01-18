@@ -10,6 +10,8 @@
    10  ansible -i inventory dev -m ping 
    11  ansible -i inventory dev -m ping inventory 
    12  ansible -i inventory dev -m ping 
+   
+   adding some line
    13  vim apache.yml
    14  vim ~/.vimrc
    15  vim apache.yml
